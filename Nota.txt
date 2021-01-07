@@ -1,0 +1,6 @@
+-La Api Rest fue desarrollada usando POJO que es usado para simplificar la lectura del código,
+siguiendo las recomendaciones de la comunidad de desarrolladores.
+
+-Se utilizó la librería lombook para reducir el código fuente.
+
+-Se realizaron métodos de creación, obtención, y elimación de figuras.

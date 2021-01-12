@@ -1,9 +1,13 @@
-package com.app.model;
+package com.app.model.shapes;
 
-public class Triangle extends CommonShapeAbs {
+import com.app.model.ShapeAbs;
+
+public class Triangle extends ShapeAbs {
 	
 	public Triangle(double base, double height) {
-		super(base, height);
+		super("triangle");
+		setBase(base);
+		setHeight(height);
 	}
 
 	@Override

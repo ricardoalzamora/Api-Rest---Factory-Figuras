@@ -1,11 +1,12 @@
-package com.app.model;
+package com.app.model.shapes;
 
-public class Circle implements ShapeInter {
-	
-	private double diameter;
+import com.app.model.ShapeAbs;
+
+public class Circle extends ShapeAbs {
 	
 	public Circle(double diameter) {
-		this.diameter = diameter;
+		super("circle");
+		setDiameter(diameter);
 	}
 	
 	@Override

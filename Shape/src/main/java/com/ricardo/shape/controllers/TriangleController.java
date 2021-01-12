@@ -1,8 +1,9 @@
 package com.ricardo.shape.controllers;
 
 import com.ricardo.shape.entity.Triangle;
-import com.ricardo.shape.services.Triangle.TriangleService;
+import com.ricardo.shape.services.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,8 @@ import java.util.Optional;
 @RequestMapping("triangle")
 public class TriangleController {
     @Autowired
-    private TriangleService triangleService;
+    @Qualifier("triangleservice")
+    private GenericService triangleService;
 
     @GetMapping
     public ResponseEntity<?> listar(){
@@ -31,7 +33,7 @@ public class TriangleController {
 
     @PostMapping
     public ResponseEntity<?> crear(@RequestBody Triangle triangle){
-        Triangle triangleDb = triangleService.save(triangle);
+        Triangle triangleDb = (Triangle) triangleService.save(triangle);
         return ResponseEntity.status(HttpStatus.CREATED).body(triangleDb);
     }
 

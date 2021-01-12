@@ -1,4 +1,4 @@
-package com.ricardo.shape.services.Circle;
+package com.ricardo.shape.services;
 
 import com.ricardo.shape.entity.Circle;
 import com.ricardo.shape.repository.CircleRepository;
@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
-@Service
-public class CircleServiceImpl implements CircleService {
+@Service("circleservice")
+public class CircleServiceImpl implements GenericService<Circle> {
 
     @Autowired
     private CircleRepository circleRepository;

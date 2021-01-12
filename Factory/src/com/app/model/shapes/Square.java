@@ -1,13 +1,19 @@
-package com.app.model;
+package com.app.model.shapes;
 
-public class Square extends CommonShapeAbs {
+import com.app.model.ShapeAbs;
+
+public class Square extends ShapeAbs {
 	
 	public Square(double base, double height) {
-		super(base, height);
+		super("square");
+		setBase(base);
+		setHeight(height);
 	}
 	
 	public Square(double side) {
-		super(side, side);
+		super("square");
+		setBase(side);
+		setHeight(side);
 	}
 
 	@Override

@@ -1,6 +1,5 @@
 package com.ricardo.shape.repository;
 
-import com.ricardo.shape.entity.Square;
 import com.ricardo.shape.entity.Triangle;
 import org.springframework.data.repository.CrudRepository;
 

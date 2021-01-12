@@ -1,15 +1,16 @@
-package com.ricardo.shape.services.Triangle;
+package com.ricardo.shape.services;
 
 import com.ricardo.shape.entity.Triangle;
 import com.ricardo.shape.repository.TriangleRepository;
+import com.ricardo.shape.services.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
-@Service
-public class TriangleServiceImpl implements TriangleService {
+@Service("triangleservice")
+public class TriangleServiceImpl implements GenericService<Triangle> {
 
     @Autowired
     private TriangleRepository triangleRepository;

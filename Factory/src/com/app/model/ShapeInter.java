@@ -10,16 +10,10 @@ public interface ShapeInter {
 	
 	public Double getSurface();
 	
-	public default Double getBase() {
-		return null;
-	}
+	public Double getBase();
 	
-	public default Double getHeight() {
-		return null;
-	}
+	public Double getHeight();
 	
-	public default Double getDiameter() {
-		return null;
-	}
+	public Double getDiameter();
 
 }

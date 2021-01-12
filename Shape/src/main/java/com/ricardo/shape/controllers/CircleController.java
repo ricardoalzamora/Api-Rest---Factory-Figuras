@@ -1,8 +1,9 @@
 package com.ricardo.shape.controllers;
 
 import com.ricardo.shape.entity.Circle;
-import com.ricardo.shape.services.Circle.CircleService;
+import com.ricardo.shape.services.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,8 @@ import java.util.Optional;
 @RequestMapping("circle")
 public class CircleController {
     @Autowired
-    private CircleService circleService;
+    @Qualifier("circleservice")
+    private GenericService circleService;
 
     @GetMapping
     public ResponseEntity<?> listar(){
@@ -31,7 +33,7 @@ public class CircleController {
 
     @PostMapping
     public ResponseEntity<?> crear(@RequestBody Circle circle){
-        Circle circleDb = circleService.save(circle);
+        Circle circleDb = (Circle) circleService.save(circle);
         return ResponseEntity.status(HttpStatus.CREATED).body(circleDb);
     }
 

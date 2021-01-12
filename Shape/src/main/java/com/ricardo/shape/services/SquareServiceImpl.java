@@ -1,4 +1,4 @@
-package com.ricardo.shape.services.Square;
+package com.ricardo.shape.services;
 
 import com.ricardo.shape.entity.Square;
 import com.ricardo.shape.repository.SquareRepository;
@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
-@Service
-public class SquareServiceImpl implements SquareService{
+@Service("squareservice")
+public class SquareServiceImpl implements GenericService<Square> {
 
     @Autowired
     private SquareRepository squareRepository;

@@ -1,8 +1,9 @@
 package com.ricardo.shape.controllers;
 
 import com.ricardo.shape.entity.Square;
-import com.ricardo.shape.services.Square.SquareService;
+import com.ricardo.shape.services.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +15,8 @@ import java.util.Optional;
 public class SquareController {
 
     @Autowired
-    private SquareService squareService;
+    @Qualifier("squareservice")
+    private GenericService squareService;
 
     @GetMapping
     public ResponseEntity<?> listar(){
@@ -32,7 +34,7 @@ public class SquareController {
 
     @PostMapping
     public ResponseEntity<?> crear(@RequestBody Square square){
-        Square squareDb = squareService.save(square);
+        Square squareDb = (Square) squareService.save(square);
         return ResponseEntity.status(HttpStatus.CREATED).body(squareDb);
     }
 

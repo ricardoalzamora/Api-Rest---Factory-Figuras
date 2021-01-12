@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		/*CUADRADO*/
-		ShapeInter cuadrado = ShapeFactory.createCommonShape("square", 3,  3);
+		ShapeInter cuadrado = ShapeFactory.createShape("square", 3,  3);
 		System.out.println("CUADRADO:");
 		System.out.println("Base: " + cuadrado.getBase());
 		System.out.println("Altura: " + cuadrado.getHeight());
@@ -16,7 +16,7 @@ public class Main {
 		System.out.println("\n");
 		
 		/*TRIANGULO*/
-		ShapeInter triangulo = ShapeFactory.createCommonShape("triangle", 3,  3);
+		ShapeInter triangulo = ShapeFactory.createShape("triangle", 3,  3);
 		System.out.println("TRIANGULO:");
 		System.out.println("Base: " + triangulo.getBase());
 		System.out.println("Altura: " + triangulo.getHeight());

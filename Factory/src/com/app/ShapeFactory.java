@@ -7,7 +7,7 @@ import com.app.model.Triangle;
 
 public class ShapeFactory {
 	
-	public static ShapeInter createCommonShape(String className, double base, double height) {
+	public static ShapeInter createShape(String className, double base, double height) {
 		switch (className) {
 		case "square":
 			return new Square(base, height);

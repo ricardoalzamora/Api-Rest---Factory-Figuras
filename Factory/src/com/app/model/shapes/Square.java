@@ -1,4 +1,6 @@
-package com.app.model;
+package com.app.model.shapes;
+
+import com.app.model.ShapeAbs;
 
 public class Square extends ShapeAbs {
 	

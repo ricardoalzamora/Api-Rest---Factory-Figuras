@@ -1,9 +1,9 @@
 package com.app;
 
-import com.app.model.Circle;
+import com.app.model.shapes.Circle;
 import com.app.model.ShapeInter;
-import com.app.model.Square;
-import com.app.model.Triangle;
+import com.app.model.shapes.Square;
+import com.app.model.shapes.Triangle;
 
 public class ShapeFactory {
 	
